@@ -15,21 +15,18 @@
       {
         "data": {
           "url":"https://raw.githubusercontent.com/howardli99/Vis2/main/fire_archive_V1_96617.csv"
-    },
-    "mark": {"type": "circle", "tooltip": {"content": "data"}},
-    "encoding": {
-    "longitude": {"field": "longitude", "type":
-    "quantitative"},
-    "latitude": {"field": "latitude", "type":
-    "quantitative"},
-   
-    "color": {
-    "field": "bright_ti4",
-    "type": "quantitative",
-    "title": "brightness of fire",
-    "scale": {"scheme": "reds"}
-    }
-    }
-    }
+        },
+        "mark": {"type": "circle", "tooltip": {"content": "data"}},
+        "encoding": {
+            "longitude": {"field": "longitude", "type":"quantitative"},
+            "latitude": {"field": "latitude", "type":"quantitative"},
+        "color": {
+        "field": "bright_ti4",
+        "type": "quantitative",
+        "title": "brightness of fire",
+        "scale": {"scheme": "reds"}
+                }
+            }
+        }
     ]
 }
