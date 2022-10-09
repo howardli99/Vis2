@@ -60,27 +60,7 @@
             {
                 "mark": {"type": "circle"}
 
-            },
-            {"mark":{
-                "type": "text",
-                "align":"right",
-                "baseline":"middle",
-                "dx": -12,
-                "fontSize": 11.5,
-                "fontStyle": "italic"
-            },
-            "encoding": {
-                "text":{"field":"confidence", "type":"nominal"},
-                "color":{"value":"black"},
-                "opacity":{
-                    "condition":{
-                        "test":"datum.confidence == 'h'",
-                        "value":1
-                    },
-                    "value":0
-                }
             }
-        }
         ]
         
 
