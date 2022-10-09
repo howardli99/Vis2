@@ -1,0 +1,55 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 450,
+    "title": "Fire in Austrlia between 1 Oct 2019 and 11 Jan 2020",
+    "data": {
+        "url":"https://raw.githubusercontent.com/howardli99/Vis2/main/fire_archive_V1_96617.csv"
+      },
+
+    "params": [
+        {
+            "name": "month_selection",
+            "bind":{
+                "input": "select",
+                "options":[
+                        null,
+                        2019,
+                        2020
+                ],
+                "labels":[
+                        "Show All",
+                        "2019",
+                        "2020"
+                ],
+                "name": "Month Selection: "
+            }
+        }
+    ],
+
+    "transform": [
+        {
+            "timeUnit":"yearmonthdate",
+            "field": "acq_date",
+            "as": "year"
+        },
+        {"filter":{"field": "acq_date",
+                    "range":[{"year": 2019,"month":11,"date": 1},
+                {"year": 2019,"month":11,"date": 11}]}}
+        
+    ],
+    "mark":"line",
+    "encoding": {
+        "y":{
+            "aggregate":"count",
+            "field":"scan",
+            "title": "Number of fires"
+        },
+        "x":{
+            "field":"acq_date",
+            "title": "date"
+        }
+    
+    } 
+}
+    
