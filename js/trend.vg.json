@@ -2,25 +2,25 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 800,
     "height": 450,
-    "title": "Fire in Austrlia between 1 Oct 2019 and 11 Jan 2020",
+    "title": "Trend of number of fires",
     "data": {
-        "url":"https://raw.githubusercontent.com/howardli99/Vis2/main/fire_archive_V1_96617.csv"
+        "url":"https://raw.githubusercontent.com/howardli99/Vis2/main/fire_archive_V1_96617_1.csv"
       },
 
-    "params": [
+      "params": [
         {
             "name": "month_selection",
             "bind":{
                 "input": "select",
                 "options":[
                         null,
-                        2019,
-                        2020
+                        "2019-08",
+                        "2019-09"
                 ],
                 "labels":[
                         "Show All",
-                        "2019",
-                        "2020"
+                        "2019-08",
+                        "2019-09"
                 ],
                 "name": "Month Selection: "
             }
@@ -28,17 +28,9 @@
     ],
 
     "transform": [
-        {
-            "timeUnit":"yearmonthdate",
-            "field": "acq_date",
-            "as": "year"
-        },
-        {"filter":{"field": "acq_date",
-                    "range":[{"year": 2019,"month":11,"date": 1},
-                {"year": 2019,"month":11,"date": 11}]}}
+        {"filter":"month_selection == null || datum.month == month_selection"}
         
     ],
-    "mark":"line",
     "encoding": {
         "y":{
             "aggregate":"count",
@@ -50,6 +42,35 @@
             "title": "date"
         }
     
-    } 
+    },
+    "layer":[
+        {
+            "mark": {"type": "line"}
+
+        },
+        {"mark":{
+            "type": "text",
+            "align":"right",
+            "baseline":"middle",
+            "dx": -12,
+            "fontSize": 11.5,
+            "fontStyle": "italic"
+        },
+        "encoding": {
+            "text":{"field":"acq_date", "type":"nominal"},
+            "color":{"value":"black"},
+            "opacity":{
+                "condition":{
+                    "test":"datum.acq_date == '2019-08-12'||datum.acq_date == '2019-09-09'",
+                    "value":1
+                },
+                "value":0
+            }
+        }
+    }
+    ]
 }
     
+
+
+
