@@ -19,7 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
   <!-- CSS file -->
-  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+  <link rel="stylesheet" type="text/css" href="style.css" media="all">
 
 
 </head>
@@ -31,49 +31,186 @@
     <!-- pure grid group -->
     <div class="pure-g">
       <div class="pure-u-1-1">
-        <h1>Week 10 homework</h1>
+        <h1>Fire in Australia From the Space</h1>
+      </div>
+      <div class="pure-u-1-1">
+        <h3>Visualisations of Data From VIIRS Sattelite</h3>
       </div>
     </div>
     <!-- end pure grid group -->
 
     <!-- pure grid group -->
     <div class="pure-g">
-      <div class="pure-u-1-2">
-        <div class="description description-left">
-          <h2>Graph 1</h2>
-          <p>This visualisation shows the distribution of fire events and their corresponding brightness </p>
-        </div>
+      <div class="pure-u-1-3">
+        <p>The bushfire in Australia is always a devastating problem in the country. It also gained many attention from the international after the 2019-2020 bushfire season.
+          Bushfire causes massive losses, to forests, to lands, to wildlifes even human lives.
+        </p>
       </div>
-      <div class="pure-u-1-2">
+      <div class="pure-u-1-3">
+        <p>
+          There are also many measures and precautions made by the government and the fire department to try to control the bushfire over the years. However, it is crucial for us to 
+          know how well those measures are performing and what are some important features government has to pay more attention on.
+        </p>
+      </div>
+      <div class="pure-u-1-3">
+        <p>
+          Fortunately, the NASA satellite data from MODIS and VIIRS makes us able to analyse the fire happened in Australia from the space. The satellite also provides near real-time 
+          data publically. Here we use the data from Aug 2019 to Sep 2019 to try to show how fire is affecting in Austalia bushfire season.
+        </p>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-2-3">
         <div id="vis1" class="vis-container"></div>
       </div>
+      <div class="pure-u-1-3">
+        <div class="description description-right">
+          <h2>Fire in Austrlia 2019/08 - 2019/09</h2>
+          <p>Let us first look at how the fire distributes over the country between August 2019 to September 2019. Each <text style='color:red'>red dot</text> in the left graph is a fire at that location. The darker
+            the color of the <text style='color:red'>red dot</text>, the more brightness temperature of that fire. We can see fromt the graph that, there were more fires in August but the some fire in September had more
+          brightness. Furthermore, most fire are observed near sea, and located at East and North region.</p>
+        </div>
+      </div>
     </div>
     <!-- end pure grid group -->
 
+    <hr>
+
     <!-- pure grid group -->
     <div class="pure-g">
-      <div class="pure-u-1-3">
+      <div class="pure-u-1-2">
         <div class="description description-left">
-          <h2>Gragh 2</h2>
-          <p>This visualisation shows the trend of number of fires in each day</p>
+          <h2>Trend of Number of Fires in Each State</h2>
+          <p>One may ask, the bushfire exists in Australia for hundreds of years and why would we concern about the fires now. Here is a slope diagram showing the change in number of fires between
+            2010 and 2019 for each state in Australia. Each line represents the changes for each state. It is clear that despite the gradient of slope is different between states, the number of fires for all states has increased from 2010 to 2019.
+            New South Wales has the most increase in numbers of fires among all states.
+          </p>
         </div>
       </div>
-      <div class="pure-u-1-3">
+      <div class="pure-u-1-2">
         <div id="vis2" class="vis-container"></div>
       </div>
     </div>
     <!-- end pure grid group -->
 
+    <hr>
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-3">
+        <div class="description description-left">
+          <h2>Number of Sighting of Koalas</h2>
+          <p>Bushfire has impacted wildlifes badly. Fire destroys their habitats and cause death due to heat and smoke. For instance, the 2019-2020 bushfire season caused thousands of Koalas lost their lives.
+            Here is a bar graph comparing the number of sightings of wild Koalas between 2019 and 2020. Even though the bushfire was not the only causing the decrease in number but was one of the main facters. 
+          </p>
+        </div>
+      </div>
+      <div class="pure-u-1-3">
+        <div id="vis3" class="vis-container"></div>
+      </div>
+      <div class="pure-u-1-3">
+        <div class="column" style="padding: top 50px;">
+          <img src= "2020-qld-koala1-koalas.jpeg"
+                width="500"
+                height="350">
+        </div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+    <hr>
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <p>Next let's look at the trend of fire between these two months. The below line graph shows the total amount of fire against each day. Use the month selecter to filter for specific month.
+          Using this graph, it can show patterns of fire in months. Base on the grpah below, the beginning of each month has higher possibility of having more fires.
+        </p>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div id="vis4" class="vis-container"></div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <hr>
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <p>Below is a heatmap which shows the count of fires each time period. This graph aims to find out which time period during each day has the most probability of having fire. The graph is plotted 
+          using time against date. In each rectangle, the darker the <text style='color:red'>red</text> color, the more number of fires occured. From the graph, we can see that between 4am and 5am, there is 
+          most likely to have fire.
+        </p>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div id="vis5" class="vis-container"></div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <hr>
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-3">
+        <div class="description description-left">
+          <h2>Comparison of Fires Between States</h2>
+          <p>This bidirectional bar chart compares the number of fires between each states as well as compares the change in number of fires between August and October.
+            We can see that Northern Territory, North South Wales and Queensland has the most number of fires. Furthermore, New South Wales, Queensland West Australia has increased
+            largely in numbers in September as compared to August.
+          </p>
+        </div>
+      </div>
+      <div class="pure-u-2-3">
+        <div id="vis6" class="vis-container"></div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+
 
   </div> <!-- end page -->
 
   <script type="text/javascript">
-    var specVis1 = "js/australia.vg.json";
-    var specVis2 = "js/trend.vg.json";
+    var specVis1 = "fire.vg.json";
+    var specVis2 = "slope.vg.json"
+    var specVis3 = "koala.vg.json";
+    var specVis4 = "graph.vg.json";
+    var specVis5 = "heatmap.vg.json";
+    var specVis6 = "bar.vg.json";
+    var specVis7 = "2020-qld-koala1-koalas.jpeg";
+
 
     vegaEmbed('#vis1', specVis1, { "actions": false });
 
-    vegaEmbed('#vis2', specVis2, { "actions": false });
+    vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis3', specVis3, { "actions": false });
+
+    vegaEmbed('#vis4', specVis4, { "actions": false });
+
+    vegaEmbed('#vis5', specVis5, { "actions": false });
+
+    vegaEmbed('#vis6', specVis6, { "actions": false });
+
+    vegaEmbed('koalaimg', specVis7, { "actions": false });
 
   </script>
 </body>
