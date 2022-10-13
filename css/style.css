@@ -3,19 +3,34 @@ body *{
 }
 
 h1 {
-    font-weight: 200;
+    font-weight: 900;
+    font-size: 45px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+h3 {
+    font-weight: 450;
+    font-size: 25px;
+    text-align: center;
+    padding-top: 10px;
+    color: grey;
 }
 
 body {
     background-color: antiquewhite;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .page {
-    width: 850px;
-    background-color: white;
+    
+    background-color: antiquewhite;
     margin: auto;
     padding: 50px;
     padding-top: 35px;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .vis-container {
