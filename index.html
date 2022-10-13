@@ -19,7 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
   <!-- CSS file -->
-  <link rel="stylesheet" type="text/css" href="style.css" media="all">
+  <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
 
 
 </head>
@@ -187,13 +187,12 @@
   </div> <!-- end page -->
 
   <script type="text/javascript">
-    var specVis1 = "fire.vg.json";
-    var specVis2 = "slope.vg.json"
-    var specVis3 = "koala.vg.json";
-    var specVis4 = "graph.vg.json";
-    var specVis5 = "heatmap.vg.json";
-    var specVis6 = "bar.vg.json";
-    var specVis7 = "2020-qld-koala1-koalas.jpeg";
+    var specVis1 = "js/fire.vg.json";
+    var specVis2 = "js/slope.vg.json"
+    var specVis3 = "js/koala.vg.json";
+    var specVis4 = "js/graph.vg.json";
+    var specVis5 = "js/heatmap.vg.json";
+    var specVis6 = "js/bar.vg.json";
 
 
     vegaEmbed('#vis1', specVis1, { "actions": false });
@@ -209,8 +208,6 @@
     vegaEmbed('#vis5', specVis5, { "actions": false });
 
     vegaEmbed('#vis6', specVis6, { "actions": false });
-
-    vegaEmbed('koalaimg', specVis7, { "actions": false });
 
   </script>
 </body>
