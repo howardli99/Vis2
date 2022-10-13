@@ -1,0 +1,44 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 500,
+    "height": 300,
+    "data": {
+        "url":"https://raw.githubusercontent.com/howardli99/Vis2/main/koala.csv",
+        "format":{"type": "csv"}
+    },
+
+    "config": {
+        "background": "antiquewhite",
+        "view": {"stroke": null},
+        "axis": {"grid": false}
+    },
+
+
+    "transform": [
+        
+    ],
+
+    
+
+
+
+    "encoding": {
+        "y":{
+            "aggregate":"count",
+            "type": "quantitative",
+            "title": "number of sightings"
+        },
+        "x":{
+            "field":"year",
+            "title": "Year of sightings",
+            "type":"ordinal"
+        }
+    
+    },
+
+    
+    
+    "mark": {"type": "bar","tooltip":{"content": "data"},"color":"gray"}
+
+        
+}

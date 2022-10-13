@@ -1,0 +1,75 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+        "url":"https://raw.githubusercontent.com/howardli99/Vis2/main/fire_australia.csv",
+        "format":{"type": "csv"}
+    },
+    "config": {
+        "background": "antiquewhite",
+        "view": {"stroke": null},
+        "axis": {"grid": false}
+    },
+
+    "hconcat":[
+        {
+           "transform":[{"filter":"datum.month == '2019-08'"}],
+           "title":"August",
+           "mark":"bar",
+           "width":300,
+           "height":200,
+           "encoding":{
+                "x":{
+                    "aggregate":"count",
+                    "type": "quantitative",
+                    "title": "number of fire",
+                    "sort":"descending",
+                    "scale":{"domain": [0, 45000]}
+                },
+                "y":{
+                    "field":"state",
+                    "type": "nominal",
+                    "axis":null
+                },
+                "color": {"field": "state", "type": "nominal"}
+           }
+           
+        },
+        {
+            "height":200,
+            "view": {"stroke": null},
+            "mark": {"type": "text", "align": "center"},
+            "encoding": {
+              "y": {
+                "field": "state",
+                "title":null
+              }
+            }
+          },
+        {
+           "transform":[{"filter":"datum.month == '2019-09'"}],
+           "title":"September",
+           "mark":"bar",
+           "view": {"stroke": null},
+           "width":300,
+           "height":200,
+           "encoding":{
+                "x":{
+                    "aggregate":"count",
+                    "type": "quantitative",
+                    "title": "number of fire",
+                    "scale":{"domain": [0, 45000]}
+                },
+                "y":{
+                    "field":"state",
+                    "type": "nominal",
+                    "title":null,
+                    "axis":null
+                },
+                "color": {"field": "state", "type": "nominal"}
+           }
+
+        }
+    ]
+
+        
+}

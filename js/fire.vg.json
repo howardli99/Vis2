@@ -1,0 +1,75 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 700,
+    "height": 400,
+    "projection": {"type": "mercator"},
+    "config": {
+        "background": "antiquewhite",
+        "view": {"stroke": null},
+        "axis": {"grid": false}
+    },
+    "params": [
+        {
+            "name": "month_selection",
+            "bind":{
+                "input": "select",
+                "options":[
+                        null,
+                        "2019-08",
+                        "2019-09"
+                ],
+                "labels":[
+                        "Show All",
+                        "2019-08",
+                        "2019-09"
+                ],
+                "name": "Month Selection: "
+            }
+        }
+    ],
+    "layer": [
+      {
+        "data": {
+          "url":"https://raw.githubusercontent.com/howardli99/Vis2/main/js/ne_110m.topojson",
+          "format": {"type": "topojson", "feature":"ne_110m_admin_0_countries"}
+        },
+        "mark": {"type": "geoshape", "fill": "lightgray", "stroke":"white"}
+      },
+      {
+        "data": {
+          "url":"https://raw.githubusercontent.com/howardli99/Vis2/main/fire_australia.csv"
+        },
+        "transform": [
+            {"filter":"month_selection == null || datum.month == month_selection"}
+            
+        ],
+        "encoding": {
+            "longitude": {"field": "longitude", "type":"quantitative"},
+            "latitude": {"field": "latitude", "type":"quantitative"},
+        "color": {
+        "field": "bright_ti4",
+        "type": "quantitative",
+        "title": "brightness of fire",
+        "scale": {"scheme": "reds"}
+                },
+        "tooltip":[
+            {"field": "longitude", "type":"quantitative","format":","},
+            {"field": "latitude", "type":"quantitative","format":","},
+            {"field": "bright_ti4", "type":"quantitative","format":","}
+
+        ]
+            },
+
+        "layer":[
+            {
+                "mark": {"type": "circle"}
+
+            }
+        
+        ]
+        
+
+        
+        }
+    ]
+}
