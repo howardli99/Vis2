@@ -14,11 +14,20 @@ h3 {
     font-size: 25px;
     text-align: center;
     padding-top: 10px;
-    color: grey;
+    color: dimgrey
+}
+
+h4 {
+    font-weight: 450;
+    font-size: 15px;
+    text-align: right;
+    font-style: italic;
+    color: DimGray;
+
 }
 
 body {
-    background-color: antiquewhite;
+    background-color: Bisque;
     padding-left: 10%;
     padding-right: 10%;
 }
