@@ -19,7 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
   <!-- CSS file -->
-  <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+  <link rel="stylesheet" type="text/css" href="style.css" media="all">
 
 
 </head>
@@ -68,7 +68,7 @@
       </div>
       <div class="pure-u-1-3">
         <div class="description description-right">
-          <h2>Fire in Austrlia 2019/08 - 2019/09</h2>
+          <h2>Fire in Australia 2019/08 - 2019/09</h2>
           <p>Let us first look at how the fire distributes over the country between August 2019 to September 2019. Each <text style='color:red'>red dot</text> in the left graph is a fire at that location. The darker
             the color of the <text style='color:red'>red dot</text>, the more brightness temperature of that fire. We can see fromt the graph that, there were more fires in August but the some fire in September had more
           brightness. Furthermore, most fire are observed near sea, and located at East and North region.</p>
@@ -85,7 +85,11 @@
         <div class="description description-left">
           <h2>Trend of Number of Fires in Each State</h2>
           <p>One may ask, the bushfire exists in Australia for hundreds of years and why would we concern about the fires now. Here is a slope diagram showing the change in number of fires between
-            2010 and 2019 for each state in Australia. Each line represents the changes for each state. It is clear that despite the gradient of slope is different between states, the number of fires for all states has increased from 2010 to 2019.
+            2010 and 2019 for each state in Australia. Each line represents the changes for each state. <text style='color:DarkBlue'>New South Wales</text> is represented using DarkBlue, 
+            <text style='color:DarkOrange'>Northern Territory</text> is represented using DarkOrange, <text style='color:red'>Queensland</text> is represented using red,
+            <text style='color:green'>South Australia</text> is represented using green,<text style='color:brown'>Tasmania</text> is represented using brown.
+            <text style='color:darkgoldenrod'>Victoria</text> is represented using Darkgoldenrod and <text style='color:blueviolet'>West Austrlaia</text> is represented using BlueViolet,
+            It is clear that despite the gradient of slope is different between states, the number of fires for all states has increased from 2010 to 2019.
             New South Wales has the most increase in numbers of fires among all states.
           </p>
         </div>
@@ -125,7 +129,9 @@
     <!-- pure grid group -->
     <div class="pure-g">
       <div class="pure-u-1-1">
-        <p>Next let's look at the trend of fire between these two months. The below line graph shows the total amount of fire against each day. Use the month selecter to filter for specific month.
+        <h2>Trend of number of fires each day Aug to Sep 2019</h2>
+        <p>Now, it is abvious that bushfire is a serious problem which Australia must pay attention on. It is time to analyze some trend and visulisation to try to figure out some patterns and thus,
+          we can make precautions. Let's look at the trend of fire each day between August and September. The below line graph shows the total amount of fire against each day. Use the month selecter to filter for specific month.
           Using this graph, it can show patterns of fire in months. Base on the grpah below, the beginning of each month has higher possibility of having more fires.
         </p>
       </div>
@@ -147,8 +153,9 @@
     <!-- pure grid group -->
     <div class="pure-g">
       <div class="pure-u-1-1">
-        <p>Below is a heatmap which shows the count of fires each time period. This graph aims to find out which time period during each day has the most probability of having fire. The graph is plotted 
-          using time against date. In each rectangle, the darker the <text style='color:red'>red</text> color, the more number of fires occured. From the graph, we can see that between 4am and 5am, there is 
+        <h2>Count of fires base on time for each day between Aug and Sep 2019</h2>
+        <p>After comparing the date, now let us compare the time within the dates. Below is a heatmap which shows the count of fires each time period. This graph aims to find out which time period during each day has the most probability of having fire. The graph is plotted 
+          using time against date. In each rectangle, the darker the <text style='color:red'>red</text> color, the more number of fires occurred. From the graph, we can see that between 4am and 5am, there is 
           most likely to have fire.
         </p>
       </div>
@@ -167,32 +174,58 @@
 
     <!-- pure grid group -->
     <div class="pure-g">
-      <div class="pure-u-1-3">
+      <div class="pure-u-1-2">
         <div class="description description-left">
           <h2>Comparison of Fires Between States</h2>
-          <p>This bidirectional bar chart compares the number of fires between each states as well as compares the change in number of fires between August and October.
-            We can see that Northern Territory, North South Wales and Queensland has the most number of fires. Furthermore, New South Wales, Queensland West Australia has increased
+          <p>Lastly we want to figure out whether all states has increasing fires or only some fires in some states are increasing. This bidirectional bar chart compares the number of fires between each states as well as compares the change in number of fires between August and October.
+            We can see that <text style='color:DarkOrange'>Northern Territory</text>, <text style='color:DarkBlue'>New South Wales</text> and <text style='color:red'>Queensland</text> has the most number of fires. 
+            Furthermore, <text style='color:DarkBlue'>New South Wales</text>, <text style='color:red'>Queensland</text> and <text style='color:blueviolet'>West Austrlaia</text> has increased
             largely in numbers in September as compared to August.
           </p>
         </div>
       </div>
-      <div class="pure-u-2-3">
+      <div class="pure-u-1-2">
         <div id="vis6" class="vis-container"></div>
       </div>
     </div>
     <!-- end pure grid group -->
+
+    <hr>
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h2>Conclusion</h2>
+        <p>From this visulisation, we can clearly see that fire is indeed a devastating problem. Furthermore, from the data and graph above, we can know that the fire is most likely to happen at the start of each month,
+          and has high chance of breaking out between 3:00 a.m. to 5.00 a.m.. 2:00 p.m. to 4:00 p.m. is another period of time the fire has high probability of breaking out.
+        </p>
+        <p>The number of fire keeps increasing in New South Wales and hence targeted approaches can be made toward the state. Queensland and West Australia are also have big trend of increasing of fires. 
+        </p>
+        <p>These are just a few observations using data visualisations, there may be many more factors causing fires. The purpose of this visualisation is to draw attention from public and together we can surely lighten the impact of fires.
+        </p>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h4>- Visualisation by YunHao Li</h2>
+    </div>
+
+
+
 
 
 
   </div> <!-- end page -->
 
   <script type="text/javascript">
-    var specVis1 = "js/fire.vg.json";
-    var specVis2 = "js/slope.vg.json"
-    var specVis3 = "js/koala.vg.json";
-    var specVis4 = "js/graph.vg.json";
-    var specVis5 = "js/heatmap.vg.json";
-    var specVis6 = "js/bar.vg.json";
+    var specVis1 = "fire.vg.json";
+    var specVis2 = "slope.vg.json"
+    var specVis3 = "koala.vg.json";
+    var specVis4 = "graph.vg.json";
+    var specVis5 = "heatmap.vg.json";
+    var specVis6 = "bar.vg.json";
+    var specVis7 = "2020-qld-koala1-koalas.jpeg";
 
 
     vegaEmbed('#vis1', specVis1, { "actions": false });
@@ -208,6 +241,8 @@
     vegaEmbed('#vis5', specVis5, { "actions": false });
 
     vegaEmbed('#vis6', specVis6, { "actions": false });
+
+    vegaEmbed('koalaimg', specVis7, { "actions": false });
 
   </script>
 </body>
