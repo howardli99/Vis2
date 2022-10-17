@@ -2,7 +2,6 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 500,
     "height": 300,
-    "title": "Trend of number of fires",
     "data": {
         "url":"https://raw.githubusercontent.com/howardli99/Vis2/main/fire_2000-2019.csv",
         "format":{"type": "csv"}
@@ -34,14 +33,23 @@
             "title": "Year",
             "type":"ordinal"
         },
-        "color": {"field": "state", "type": "nominal"}
+        "color": {"field": "state", 
+                          "type": "nominal",
+                          "scale":{"range":["DarkBlue","DarkOrange","red","green","brown","DarkGoldenRod","BlueViolet"]}},
+        
+        "tooltip":[
+            {"field":"year","type":"nominal","title":"Year"},
+            {"field":"date","aggregate":"count","title":"Number of fire"},
+            {"field":"state","type":"nominal","title":"State"}
+        ]
+           
     
     },
     
 
     
     
-    "mark": {"type": "line","tooltip":{"content": "data"}}
+    "mark": {"type": "line"}
 
         
 }

@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 1300,
     "height": 450,
-    "title": "Trend of number of fires",
+
     "data": {
         "url":"https://raw.githubusercontent.com/howardli99/Vis2/main/fire_australia.csv"
     },
@@ -24,8 +24,8 @@
                 ],
                 "labels":[
                         "Show All",
-                        "2019-08",
-                        "2019-09"
+                        "August",
+                        "September"
                 ],
                 "name": "Month Selection: "
             }
@@ -43,9 +43,13 @@
             "title": "Number of fires"
         },
         "x":{
-            "field":"acq_date",
+            "field":"date",
             "title": "date"
-        }
+        },
+        "tooltip":[
+            {"field":"date","type":"nominal","title":"Date"},
+            {"field":"date","aggregate":"count","title":"Number of fire"}
+        ]
     
     },
     "layer":[

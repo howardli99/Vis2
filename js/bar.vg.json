@@ -14,7 +14,7 @@
         {
            "transform":[{"filter":"datum.month == '2019-08'"}],
            "title":"August",
-           "mark":"bar",
+           "mark": {"type": "bar","tooltip":{"content": "data"}},
            "width":300,
            "height":200,
            "encoding":{
@@ -30,25 +30,16 @@
                     "type": "nominal",
                     "axis":null
                 },
-                "color": {"field": "state", "type": "nominal"}
+                "color": {"field": "state", 
+                          "type": "nominal",
+                          "scale":{"range":["DarkBlue","DarkOrange","red","green","brown","DarkGoldenRod","BlueViolet"]}}
            }
            
         },
         {
-            "height":200,
-            "view": {"stroke": null},
-            "mark": {"type": "text", "align": "center"},
-            "encoding": {
-              "y": {
-                "field": "state",
-                "title":null
-              }
-            }
-          },
-        {
            "transform":[{"filter":"datum.month == '2019-09'"}],
            "title":"September",
-           "mark":"bar",
+           "mark": {"type": "bar","tooltip":{"content": "data"}},
            "view": {"stroke": null},
            "width":300,
            "height":200,

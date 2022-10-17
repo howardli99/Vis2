@@ -32,13 +32,17 @@
             "field":"year",
             "title": "Year of sightings",
             "type":"ordinal"
-        }
+        },
+        "tooltip":[
+            {"field":"year","type":"nominal","title":"Year"},
+            {"field":"year","aggregate":"count","title":"Number of sightings"}
+        ]
     
     },
 
     
     
-    "mark": {"type": "bar","tooltip":{"content": "data"},"color":"gray"}
+    "mark": {"type": "bar","color":"gray"}
 
         
 }
